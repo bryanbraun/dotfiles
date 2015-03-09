@@ -1,0 +1,17 @@
+# Sublime Text Project Files
+*.sublime-project
+*.sublime-workspace
+
+# PHP Storm Project Files
+*.idea
+
+# Sass
+.sass-cache
+
+# Composer vendor
+vendor/*.git
+vendor/*/.git
+vendor/.git
+
+# Other
+.DS_Store

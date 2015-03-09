@@ -1,0 +1,23 @@
+[user]
+	name = Bryan Braun
+[merge]
+	tool = vimdiff
+[push]
+	default = current
+[core]
+	excludesfile = /Users/bryan.braun/.gitignore_global
+[color]
+	ui = true
+[alias]
+  co = checkout
+  ci = commit
+  st = status -sb
+  br = branch
+  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+
+[rerere]
+	enabled = true
+[credential]
+	helper = osxkeychain
