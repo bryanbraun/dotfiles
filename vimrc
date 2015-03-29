@@ -33,8 +33,8 @@
   set background=dark " tells vim that you are using a dark background, and to adjust the color scheme accordingly
 
 " ====== Color Schemes - Uncomment your color scheme of choice ======
-  colorscheme wombat " set colorscheme to wombat
-" set colorscheme ir_black "set colorscheme to ir_black
+  colorscheme wombat256 " set colorscheme to wombat256
+" set colorscheme wombat " set colorscheme to wombat
 
 " ====== Key bindings ======
   inoremap jk <esc> " type jk in insert mode to switch to normal mode

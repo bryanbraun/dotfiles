@@ -5,7 +5,7 @@
 [push]
 	default = current
 [core]
-	excludesfile = /Users/bryan.braun/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [color]
 	ui = true
 [alias]
