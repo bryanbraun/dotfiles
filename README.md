@@ -9,6 +9,14 @@ Improves vim and git. Also adds some nice terminal colors.
 
 Have suggestions? Throw them in the issue queue.
 
+## OSX Default Settings
+
+The OSX file contains my preferred OSX settings and is designed to be run once (like when setting up a new computer). It can be run from within this repo with the following command:
+
+    sh osx
+
+The file is a selectively commented version of Mathias Bynens orginal (which can be found at https://mths.be/osx).
+
 ## Maintainence
 
 You can maintain the dotfiles in a separate repo and run buildsymlinks.sh to automatically create symlinks to these files in your $HOME directory. If you are doing this, ensure that your [repo directory is correct in the script](https://github.com/bryanbraun/dotfiles/blob/zsh/buildsymlinks.sh#L9) and that it does what you expect it to do. In short, it does this:
