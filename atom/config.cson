@@ -1,0 +1,15 @@
+"*":
+  editor:
+    invisibles: {}
+    fontSize: 13
+  core:
+    themes: [
+      "seti-ui"
+      "seti-syntax"
+    ]
+  "exception-reporting":
+    userId: "f9efc126-a716-0497-70da-1aef0bbe070d"
+  welcome:
+    showOnStartup: false
+  "tree-view":
+    hideIgnoredNames: true
