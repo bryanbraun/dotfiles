@@ -39,3 +39,9 @@ fi
 
 # Custom Shell Aliases
 ## Add aliases here as needed.
+
+
+
+# Manage Ruby Versions with rbenv
+export PATH="$HOME/.rbenv/bin:$PATH" # this command should be first
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # this command should be second
