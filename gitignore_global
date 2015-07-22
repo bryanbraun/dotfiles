@@ -13,5 +13,8 @@ vendor/*.git
 vendor/*/.git
 vendor/.git
 
+# Vim
+*.swp
+
 # Other
 .DS_Store

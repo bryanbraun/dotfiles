@@ -39,8 +39,8 @@ fi
 
 # Custom Shell Aliases
 ## Add aliases here as needed.
-
-
+alias npm-exec='PATH=$(npm bin):$PATH' # Allows for running local binarys like this: npm-exec karma
+alias server='python -m SimpleHTTPServer 1111' # Start a quick and easy local web server for static files.
 
 # Manage Ruby Versions with rbenv
 export PATH="$HOME/.rbenv/bin:$PATH" # this command should be first

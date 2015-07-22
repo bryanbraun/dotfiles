@@ -1,11 +1,16 @@
 "*":
   editor:
     invisibles: {}
-    fontSize: 13
+    preferredLineLength: 120
   core:
     themes: [
       "seti-ui"
       "seti-syntax"
+    ]
+    disabledPackages: [
+      "emmet-atom"
+      "atom-ternjs"
+      "linter-jshint"
     ]
   "exception-reporting":
     userId: "f9efc126-a716-0497-70da-1aef0bbe070d"
@@ -13,3 +18,9 @@
     showOnStartup: false
   "tree-view":
     hideIgnoredNames: true
+  "autocomplete-plus": {}
+  "fuzzy-finder": {}
+  emmet: {}
+  "atom-ternjs": {}
+  linter: {}
+  "git-blame": {}

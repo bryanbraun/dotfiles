@@ -1,5 +1,6 @@
 [user]
 	name = Bryan Braun
+	email = bbraun7@gmail.com
 [merge]
 	tool = vimdiff
 [push]
