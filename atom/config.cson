@@ -10,7 +10,6 @@
     disabledPackages: [
       "emmet-atom"
       "atom-ternjs"
-      "linter-jshint"
     ]
   "exception-reporting":
     userId: "f9efc126-a716-0497-70da-1aef0bbe070d"
@@ -22,5 +21,20 @@
   "fuzzy-finder": {}
   emmet: {}
   "atom-ternjs": {}
-  linter: {}
+  linter:
+    showErrorPanel: false
   "git-blame": {}
+  "linter-jshint":
+    disableWhenNoJshintrcFileInPath: true
+    lintInlineJavaScript: true
+  tabs:
+    usePreviewTabs: true
+  "atom-pair": {}
+  pigments:
+    ignoredScopes: [
+      "\\.comment"
+      "\\.string"
+    ]
+  "color-picker":
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
