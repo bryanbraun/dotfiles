@@ -1,40 +1,50 @@
 "*":
-  editor:
-    invisibles: {}
-    preferredLineLength: 120
+  "atom-pair": {}
+  "atom-ternjs": {}
+  "autocomplete-plus":
+    confirmCompletion: "tab"
+  "color-picker":
+    preferredFormat: "HEX"
+    uppercaseColorValues: true
   core:
+    disabledPackages: [
+      "emmet-atom"
+      "pane-split-moves-tab"
+    ]
     themes: [
       "seti-ui"
       "seti-syntax"
     ]
-    disabledPackages: [
-      "emmet-atom"
-      "atom-ternjs"
+  docblockr:
+    extra_tags: [
+      "@memberof"
     ]
+  editor:
+    invisibles: {}
+    preferredLineLength: 120
+  emmet: {}
   "exception-reporting":
     userId: "f9efc126-a716-0497-70da-1aef0bbe070d"
-  welcome:
-    showOnStartup: false
-  "tree-view":
-    hideIgnoredNames: true
-  "autocomplete-plus": {}
   "fuzzy-finder": {}
-  emmet: {}
-  "atom-ternjs": {}
+  "git-blame": {}
   linter:
     showErrorPanel: false
-  "git-blame": {}
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
+  "linter-jscs":
+    onlyConfig: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
     lintInlineJavaScript: true
-  tabs:
-    usePreviewTabs: true
-  "atom-pair": {}
+  "persistent-undo": {}
   pigments:
     ignoredScopes: [
       "\\.comment"
       "\\.string"
     ]
-  "color-picker":
-    preferredFormat: "HEX"
-    uppercaseColorValues: true
+  tabs:
+    usePreviewTabs: true
+  "tree-view":
+    hideIgnoredNames: true
+  welcome:
+    showOnStartup: false
