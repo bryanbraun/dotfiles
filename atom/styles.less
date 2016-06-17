@@ -20,6 +20,17 @@ atom-text-editor {
 
 // To style other content in the text editor's shadow DOM, use the ::shadow
 // expression
-atom-text-editor::shadow .cursor {
-
+atom-text-editor::shadow {
+  
+  // Add black line-number gutters, like the ones displayed here:
+  // https://dengmao.wordpress.com/2007/01/22/vim-color-scheme-wombat/
+  .gutter {
+    .line-number {
+      background: #121212;
+    }
+    .line-numbers {
+      background: #121212 !important;
+    }
+  }
 }
+

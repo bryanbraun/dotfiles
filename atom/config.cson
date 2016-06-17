@@ -10,10 +10,11 @@
     disabledPackages: [
       "emmet-atom"
       "pane-split-moves-tab"
+      "persistent-undo"
     ]
     themes: [
-      "seti-ui"
-      "seti-syntax"
+      "nucleus-dark-ui"
+      "wombat-dark-syntax"
     ]
   docblockr:
     extra_tags: [
@@ -27,8 +28,7 @@
     userId: "f9efc126-a716-0497-70da-1aef0bbe070d"
   "fuzzy-finder": {}
   "git-blame": {}
-  linter:
-    showErrorPanel: false
+  linter: {}
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
   "linter-jscs":
