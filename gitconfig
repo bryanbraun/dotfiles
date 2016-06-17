@@ -1,6 +1,7 @@
 [user]
 	name = Bryan Braun
 	email = bbraun7@gmail.com
+	signingkey = 3754D5C0
 [merge]
 	tool = vimdiff
 [push]
@@ -14,7 +15,7 @@
   ci = commit
   st = status -sb
   br = branch
-  hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+  hist = log --pretty=format:'%h %G? %ad | %s%d [%an]' --graph --date=short
   type = cat-file -t
   dump = cat-file -p
 
@@ -28,3 +29,7 @@
 	required = true
 [rebase]
 	autostash = true
+[commit]
+	gpgsign = true
+[gpg]
+  program = gpg

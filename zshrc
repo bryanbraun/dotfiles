@@ -45,3 +45,14 @@ alias server='python -m SimpleHTTPServer 1111' # Start a quick and easy local we
 # Manage Ruby Versions with rbenv
 export PATH="$HOME/.rbenv/bin:$PATH" # this command should be first
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # this command should be second
+
+# Starts the gpg-agent dameon automatically in each shell. This will allow us to sign git commits with GPG
+# keys without needing to reenter our password every time. For details:
+#   Github setup: https://help.github.com/categories/gpg/ 
+#   Automatic local signing setup: https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
+if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
+    source ~/.gnupg/.gpg-agent-info
+    export GPG_AGENT_INFO
+else
+    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
+fi
