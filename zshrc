@@ -41,10 +41,17 @@ fi
 ## Add aliases here as needed.
 alias npm-exec='PATH=$(npm bin):$PATH' # Allows for running local binarys like this: npm-exec karma
 alias server='python -m SimpleHTTPServer 1111' # Start a quick and easy local web server for static files.
+alias removemerged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
+alias ftc='sudo killall VDCAssistant' # ftc stands for "face time killer", named after this: https://github.com/asimpson/VDCAssistant-killer
 
 # Manage Ruby Versions with rbenv
 export PATH="$HOME/.rbenv/bin:$PATH" # this command should be first
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # this command should be second
+
+# Access Global Composer packages from the CLI
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+export BUNDLER_EDITOR='code'
 
 # Starts the gpg-agent dameon automatically in each shell. This will allow us to sign git commits with GPG
 # keys without needing to reenter our password every time. For details:
@@ -56,3 +63,7 @@ if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
 else
     eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
 fi
+
+# Enables iTerm2 Shell Integration Features. See https://iterm2.com/documentation-shell-integration.html
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+

@@ -18,3 +18,4 @@ vendor/.git
 
 # Other
 .DS_Store
+.vscode

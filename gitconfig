@@ -1,13 +1,16 @@
 [user]
 	name = Bryan Braun
 	email = bbraun7@gmail.com
-	signingkey = 3754D5C0
+	signingkey = 4BDBCE1D
 [merge]
 	tool = vimdiff
 [push]
 	default = current
+[pull]
+  rebase = true
 [core]
 	excludesfile = ~/.gitignore_global
+	hooksPath = /Users/bryanbraun/.githooks
 [color]
 	ui = true
 [alias]
@@ -33,3 +36,5 @@
 	gpgsign = true
 [gpg]
   program = gpg
+[secrets]
+	providers = /Users/bryanbraun/Code/sparkbox/secrets/provider.js

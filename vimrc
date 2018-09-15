@@ -16,7 +16,7 @@
   set nowrap " does not wrap text
   set showcmd " show keystrokes in status line
   set laststatus=2 " display the status line
-  set statusline=%#StatusLineNC#\ Git\ %{GitBranchInfoTokens()[0]}\ %#LineNr#\ %t " displays git branch + other info in status line
+" set statusline=%#StatusLineNC#\ Git\ %{GitBranchInfoTokens()[0]}\ %#LineNr#\ %t " displays git branch + other info in status line
 
 " ====== Search Settings ======
   set ignorecase " makes searching case insensitive
