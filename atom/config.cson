@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "d183ef43-c7f1-4769-989a-a18728f747ce"
   "atom-pair": {}
   "atom-ternjs": {}
   "autocomplete-plus":
@@ -7,15 +10,21 @@
     preferredFormat: "HEX"
     uppercaseColorValues: true
   core:
+    customFileTypes:
+      "text.html.php": [
+        "drush"
+      ]
     disabledPackages: [
       "emmet-atom"
-      "pane-split-moves-tab"
+      "pigments"
       "persistent-undo"
     ]
+    telemetryConsent: "limited"
     themes: [
       "nucleus-dark-ui"
       "wombat-dark-syntax"
     ]
+    titleBar: "custom"
   docblockr:
     extra_tags: [
       "@memberof"
@@ -23,19 +32,27 @@
   editor:
     invisibles: {}
     preferredLineLength: 120
+    tabType: "soft"
   emmet: {}
   "exception-reporting":
     userId: "f9efc126-a716-0497-70da-1aef0bbe070d"
   "fuzzy-finder": {}
   "git-blame": {}
-  linter: {}
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  linter:
+    errorPanelHeight: 51
   "linter-eslint":
     disableWhenNoEslintrcFileInPath: true
+    globalNodePath: "/usr/local"
   "linter-jscs":
     onlyConfig: true
   "linter-jshint":
     disableWhenNoJshintrcFileInPath: true
     lintInlineJavaScript: true
+  "linter-stylelint": {}
+  "markdown-preview":
+    useGitHubStyle: true
   "persistent-undo": {}
   pigments:
     ignoredScopes: [
@@ -48,3 +65,6 @@
     hideIgnoredNames: true
   welcome:
     showOnStartup: false
+".html.php.text":
+  editor:
+    showInvisibles: false
