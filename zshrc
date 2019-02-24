@@ -51,6 +51,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # this command shoul
 # Access Global Composer packages from the CLI
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
+# Homebrew told me to do this because it was installing stuff here.
+export PATH="/usr/local/sbin:$PATH"
+
 export BUNDLER_EDITOR='code'
 
 # Starts the gpg-agent dameon automatically in each shell. This will allow us to sign git commits with GPG
