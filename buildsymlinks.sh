@@ -8,7 +8,7 @@
 
 dir=~/Code/bryanbraun/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="gitconfig gitignore_global vimrc vim oh-my-zsh zshrc private atom"    # list of files/folders to symlink in homedir
+files="gitconfig gitignore_global vimrc vim oh-my-zsh zshrc private"    # list of files/folders to symlink in homedir
 
 ##########
 
