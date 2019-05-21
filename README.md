@@ -17,6 +17,15 @@ The OSX file contains my preferred OSX settings and is designed to be run once (
 
 The file is a selectively commented version of Mathias Bynens orginal (which can be found at https://mths.be/osx).
 
+## iTerm Profile
+
+To use my iTerm profile and preferences, do the following:
+
+1. Install iTerm2: `brew cask install iterm2`
+2. Browse to preferences: iTerm2 > Preferences > General > Preferences
+3. Check the "Load preferences from a custom folder or URL" option.
+4. Click the "Browse" button, and select the `dotfiles/iterm2` folder (in your locally cloned version of this repo).
+
 ## Maintainence
 
 You can maintain the dotfiles in a separate repo and run buildsymlinks.sh to automatically create symlinks to these files in your $HOME directory. If you are doing this, ensure that your [repo directory is correct in the script](https://github.com/bryanbraun/dotfiles/blob/zsh/buildsymlinks.sh#L9) and that it does what you expect it to do. In short, it does this:
