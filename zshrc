@@ -44,9 +44,12 @@ alias server='python -m SimpleHTTPServer 1111' # Start a quick and easy local we
 alias removemerged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias ftc='sudo killall VDCAssistant' # ftc stands for "face time killer", named after this: https://github.com/asimpson/VDCAssistant-killer
 
-# Manage Ruby Versions with rbenv
-export PATH="$HOME/.rbenv/bin:$PATH" # this command should be first
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi # this command should be second
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Access Global Composer packages from the CLI
 export PATH="$HOME/.composer/vendor/bin:$PATH"
