@@ -26,7 +26,17 @@ To use my iTerm profile and preferences, do the following:
 3. Check the "Load preferences from a custom folder or URL" option.
 4. Click the "Browse" button, and select the `dotfiles/iterm2` folder (in your locally cloned version of this repo).
 
-## Maintainence
+## Approach to `.bash_profile`
+
+These dotfiles are designed for a personal computer, using an interactive shell supporting bash. As a result:
+
+- `.profile` exists, but it's intentionally left empty
+- `.bash_profile` contains nearly all of my shell setup
+- `.zshrc` only contains zsh-specific setup (importing the rest from `.bash_profile`)
+
+With the assumptions above, no other RC files should be necessary. If I ever want to move away from ZSH, then my `.bash_profile` will already have everything I need.
+
+## Maintenance
 
 You can maintain the dotfiles in a separate repo and run buildsymlinks.sh to automatically create symlinks to these files in your $HOME directory. If you are doing this, ensure that your [repo directory is correct in the script](https://github.com/bryanbraun/dotfiles/blob/zsh/buildsymlinks.sh#L9) and that it does what you expect it to do. In short, it does this:
 

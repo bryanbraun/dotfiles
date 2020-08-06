@@ -10,8 +10,8 @@
   rebase = true
 [core]
 	excludesfile = ~/.gitignore_global
-	hooksPath = /Users/bryanbraun/.githooks
 	pager = diff-so-fancy | less --tabs=4 -RFX
+	hooksPath = /Users/bryanbraun/.githooks
 [color]
 	ui = true
 [alias]
@@ -55,3 +55,5 @@
 	stripLeadingSymbols = false
 [diff]
 	compactionHeuristic = true
+[init]
+	templateDir = /Users/bryanbraun/.git-template
