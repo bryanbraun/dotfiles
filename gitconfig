@@ -20,8 +20,8 @@
   st = status -sb
   br = branch
   hist = log --pretty=format:'%h %G? %ad | %s%d [%an]' --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
+  # For details, see https://github.com/GitAlias/gitalias/blob/bf490080764f84d54dbd237920902d27c4b13e8f/gitalias.txt#L683
+  churn = !"f() { git log --all --find-copies --find-renames --name-only --format='format:' \"$@\" | awk 'NF{a[$0]++}END{for(i in a){print a[i], i}}' | sort -n;};f"  
 
 [rerere]
 	enabled = true
@@ -57,3 +57,4 @@
 	compactionHeuristic = true
 [init]
 	templateDir = /Users/bryanbraun/.git-template
+  defaultBranch = main

@@ -4,8 +4,11 @@
 
 
 # SETUP FOR LANGAUGES AND TOOLS
+export PATH="$HOME/go/bin:$PATH" # Golang
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer (PHP)
 export PATH="/usr/local/sbin:$PATH" # Homebrew
+
+export GOBIN="$HOME/go/bin" # Golang
 
 export NVM_DIR="$HOME/.nvm"
 [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
