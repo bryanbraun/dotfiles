@@ -30,7 +30,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git github osx bower brew bundler web-search git-open)
+plugins=(git github macos bower brew bundler web-search git-open)
 
 source $ZSH/oh-my-zsh.sh
 
