@@ -20,7 +20,7 @@ export BUNDLER_EDITOR='code'
 # CONVENIENCES
 
 # Custom Shell Aliases - add aliases here as needed.
-alias server='python -m SimpleHTTPServer 1111' # Start a quick and easy local web server for static files.
+alias server='python3 -m http.server 1111' # Start a quick and easy local web server for static files.
 alias removemerged='git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d'
 alias ftk='sudo killall VDCAssistant' # ftk stands for "face time killer", named after this: https://github.com/asimpson/VDCAssistant-killer
 
@@ -28,15 +28,4 @@ alias ftk='sudo killall VDCAssistant' # ftk stands for "face time killer", named
 function dsh(){
   docker exec -it "$@" /bin/bash
 }
-
-# Starts the gpg-agent dameon automatically in each shell. This will allow us to sign git commits with GPG
-# keys without needing to reenter our password every time. For details:
-#   Github setup: https://help.github.com/categories/gpg/
-#   Automatic local signing setup: https://gist.github.com/bmhatfield/cc21ec0a3a2df963bffa3c1f884b676b
-if [ -f ~/.gnupg/.gpg-agent-info ] && [ -n "$(pgrep gpg-agent)" ]; then
-    source ~/.gnupg/.gpg-agent-info
-    export GPG_AGENT_INFO
-else
-    eval $(gpg-agent --daemon --write-env-file ~/.gnupg/.gpg-agent-info)
-fi
 
