@@ -6,6 +6,7 @@
 # SETUP FOR LANGAUGES AND TOOLS
 export PATH="$HOME/go/bin:$PATH" # Golang
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer (PHP)
+export PATH="$PATH:$HOME/.rvm/bin" # RVM (Ruby)
 [[ -s /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)" # Homebrew PATH configuration for M1 Macs
 
 export GOBIN="$HOME/go/bin" # Golang
