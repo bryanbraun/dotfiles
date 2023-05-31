@@ -12,6 +12,7 @@
 	excludesfile = ~/.gitignore_global
 	pager = diff-so-fancy | less --tabs=4 -RFX
 	hooksPath = /Users/bryanbraun/.githooks
+	compression = 0
 [color]
 	ui = true
 [alias]
@@ -58,3 +59,5 @@
   defaultBranch = main
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[http]
+	postBuffer = 157286400
