@@ -28,9 +28,25 @@ ZSH_THEME="steeef"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
 
+
+# Improve behavior for history searching (see https://martinheinz.dev/blog/110)
+HISTFILE="$HOME/.zsh_history" # This is also currently set by oh-my-zsh, but I set it again here, just in case
+HISTSIZE=10000000
+SAVEHIST=10000000
+HISTORY_IGNORE="(ls|cd|pwd|exit)*"
+HIST_STAMPS="yyyy-mm-dd"
+
+setopt EXTENDED_HISTORY          # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_IGNORE_ALL_DUPS      # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_SPACE         # Do not record an event starting with a space.
+setopt HIST_VERIFY               # Do not execute immediately upon history expansion.
+setopt APPEND_HISTORY            # append to history file (Default)
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks from each command line being added to the history list.
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(gh macos docker-compose npm bundler web-search z)
+# (note: the fzf plugin requires fzf to be installed on the machine)
+plugins=(gh macos docker-compose npm bundler web-search z fzf)
 
 source $ZSH/oh-my-zsh.sh
 

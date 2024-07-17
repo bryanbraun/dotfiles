@@ -8,6 +8,7 @@ export PATH="$HOME/go/bin:$PATH" # Golang
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer (PHP)
 export PATH="$PATH:$HOME/.rvm/bin" # RVM (Ruby)
 [[ -s /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)" # Homebrew PATH configuration for M1 Macs
+. "$(brew --prefix asdf)/libexec/asdf.sh" # ASDF setup. Assumes that asdf is installed via homebrew.
 
 export GOBIN="$HOME/go/bin" # Golang
 
