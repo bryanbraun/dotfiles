@@ -7,11 +7,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="steeef"
+# Load a zsh theme.
+# Uses a custom location to allow loading of custom themes.
+ZSH_CUSTOM=$HOME/.zsh-custom
+ZSH_THEME="bb" # a custom theme
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -74,7 +73,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 #   prints a clear warning, so you can decide whether you want to run `nvm install`.
 #
 # - If no .nvmrc is found, it does `nvm use default`.
-# 
+#
 # Recommended: leave your default as something generic,
 # e.g. do `nvm alias default stable`
 ####
