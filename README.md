@@ -25,8 +25,8 @@ The file is a selectively commented and customized version of Mathias Bynens org
 To use my iTerm profile and preferences, do the following:
 
 1. Install iTerm2: `brew install --cask iterm2`.
-2. Browse to preferences: iTerm2 > Preferences > General > Preferences
-3. Check the "Load preferences from a custom folder or URL" option.
+2. Browse to settings: iTerm2 > Settings > General > Settings
+3. Check the "Load settings from a custom folder or URL" option.
 4. Click the "Browse" button, and select the `dotfiles/iterm2` folder (in your locally cloned version of this repo).
 
 ### Generic dotfiles
