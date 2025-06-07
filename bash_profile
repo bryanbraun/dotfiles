@@ -11,12 +11,19 @@ export PATH="$PATH:$HOME/.rvm/bin" # RVM (Ruby)
 
 export GOBIN="$HOME/go/bin" # Golang
 
-export NVM_DIR="$HOME/.nvm"
-[[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads rvm
+# Commenting out node install via NVM in order to try `fnm`
+# export NVM_DIR="$HOME/.nvm"
+# [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads rvm
+eval "$(fnm env --use-on-cd --shell zsh)" # node
 
 export BUNDLER_EDITOR='code'
+
+export PYENV_ROOT="$HOME/.pyenv" # Python
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 
 # CONVENIENCES
 

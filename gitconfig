@@ -62,3 +62,5 @@
 	insteadOf = https://github.com/
 [http]
 	postBuffer = 157286400
+[includeIf "gitdir:~/Code/classdojo/"]
+  path = ~/.dojo.gitconfig
