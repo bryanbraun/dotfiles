@@ -1,29 +1,24 @@
 # SOURCE OTHER FILES
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
-[[ -s $HOME/.private ]] && source "$HOME/.private" # For any private or proprietary setup
+[[ -s "$HOME/.private" ]] && source "$HOME/.private" # For any private or proprietary setup
+[[ -s "$HOME/.workrc" ]] && source "$HOME/.workrc" # For any work-specific setup (omitted from bryanbraun/dotfiles)
 
 
 # SETUP FOR LANGAUGES AND TOOLS
+[[ -s /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)" # Homebrew PATH configuration for M1 Macs
+[[ -s /opt/homebrew/opt/chruby/share/chruby/chruby.sh ]] && source /opt/homebrew/opt/chruby/share/chruby/chruby.sh # Ruby
+[[ -s /opt/homebrew/opt/chruby/share/chruby/auto.sh ]] && source /opt/homebrew/opt/chruby/share/chruby/auto.sh # Ruby
+export BUNDLER_EDITOR='code' # Ruby
+export GOBIN="$HOME/go/bin" # Golang
 export PATH="$HOME/go/bin:$PATH" # Golang
 export PATH="$HOME/.composer/vendor/bin:$PATH" # Composer (PHP)
-export PATH="$PATH:$HOME/.rvm/bin" # RVM (Ruby)
-[[ -s /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)" # Homebrew PATH configuration for M1 Macs
-
-export GOBIN="$HOME/go/bin" # Golang
-
-# Commenting out node install via NVM in order to try `fnm`
-# export NVM_DIR="$HOME/.nvm"
-# [[ -s "$NVM_DIR/nvm.sh" ]] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [[ -s "$NVM_DIR/bash_completion" ]] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # This loads rvm
+export PYENV_ROOT="$HOME/.pyenv" # Python
+export PATH="$PYENV_ROOT/bin:$PATH" # Python
+# assumes installation of pyenv and fnm
+eval "$(pyenv init --path)" # Python
+eval "$(pyenv init --detect-shell)" # Python
 eval "$(fnm env --use-on-cd --shell zsh)" # node
 
-export BUNDLER_EDITOR='code'
-
-export PYENV_ROOT="$HOME/.pyenv" # Python
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
 
 # CONVENIENCES
 

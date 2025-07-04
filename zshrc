@@ -60,5 +60,3 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 # If using NVM, consider including this gist for auto changing node versions when changing directories:
 # https://gist.github.com/callumlocke/30990e247e52ab6ac1aa98e5f0e5bbf5
 ####
-
-source ~/.api_tz_dont_delete
