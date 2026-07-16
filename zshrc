@@ -50,11 +50,14 @@ plugins=(gh macos docker-compose npm bundler web-search z fzf)
 source $ZSH/oh-my-zsh.sh
 
 # Enables iTerm2 Shell Integration Features. See https://iterm2.com/documentation-shell-integration.html
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+test -e "$HOME/.iterm2_shell_integration.zsh" && source "$HOME/.iterm2_shell_integration.zsh"
 
 # Add bash tab-completion compatibility to zsh, followed by any tab-completion scripts
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
+
+# Safe-chain ZSH initialization script (see https://github.com/AikidoSec/safe-chain)
+[[ -s "$HOME/.safe-chain" ]] && source "$HOME/.safe-chain/scripts/init-posix.sh"
 
 ####
 # If using NVM, consider including this gist for auto changing node versions when changing directories:

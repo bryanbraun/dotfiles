@@ -1,7 +1,7 @@
 [user]
 	name = Bryan Braun
 	email = bbraun7@gmail.com
-	signingkey = 4BDBCE1D
+	signingkey = ~/.ssh/id_rsa.pub
 [merge]
 	tool = vimdiff
 [push]
@@ -13,8 +13,6 @@
 	pager = diff-so-fancy | less --tabs=4 -RFX
 #	hooksPath = /Users/bryanbraun/.githooks
 	compression = 0
-[color]
-	ui = true
 [alias]
   co = checkout
   ci = commit
@@ -39,11 +37,16 @@
 	gpgsign = true
 [gpg]
   program = gpg
+  format = ssh
+[gpg "ssh"]
+  allowedSignersFile = /Users/bryanbraun/.ssh/allowed_signers
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52
 	newNormal = green bold
 	newHighlight = green bold 22
+[color]
+	ui = true
 [color "diff"]
 	meta = yellow
 	frag = magenta bold
@@ -62,5 +65,7 @@
 	insteadOf = https://github.com/
 [http]
 	postBuffer = 157286400
+[branch]
+  sort = -committerdate
 [includeIf "gitdir:~/Code/classdojo/"]
   path = ~/.dojo.gitconfig

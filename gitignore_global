@@ -19,3 +19,7 @@ vendor/.git
 # Other
 .DS_Store
 .vscode
+
+# Personal Organization Conventions
+.designs
+.bryan
